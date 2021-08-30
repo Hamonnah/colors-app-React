@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import ButtonsPanel from './ButtonsPanel';
+import Heading from './Heading';
+
 
 function App() {
+
+  const [headingText, setHeadingText] = useState('Colors App');
+  
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div className="App">
+    <Heading text={headingText}/>
+    <Heading text={headingText}/>
+    {/* <button onClick={()=>setClass('red')}>Red</button>
+    <button onClick={()=>setClass('green')}>Green</button>
+    <button onClick={()=>setClass('blue')}>Blue</button> */} 
+    <ButtonsPanel setText = {setHeadingText}/>
+    <ButtonsPanel setText = {setHeadingText}/>
+  </div>
+   
   );
 }
 

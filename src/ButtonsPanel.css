@@ -1,0 +1,14 @@
+button {
+    margin: 10px 0 10px 10px;
+    padding: 10px;
+    background-color: grey;
+    color: white;
+    border: 1px solid grey;
+}
+
+button:hover, button:focus {
+    background-color: rgb(85, 83, 83);
+    border: 1px solid rgb(85, 83, 83);
+    cursor: pointer;
+    outline: 0;
+}
